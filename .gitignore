@@ -24,6 +24,5 @@ hs_err_pid*
 replay_pid*
 
 # idea Files #
-*/.idea
-/.idea
+*.idea
 *.iml
