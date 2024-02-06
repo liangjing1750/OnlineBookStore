@@ -1,8 +1,8 @@
 package test;
 
+import org.junit.jupiter.api.Test;
 import valueobject.BookInfo;
 
-import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class BookInfoTest {

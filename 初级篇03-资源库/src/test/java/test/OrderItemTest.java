@@ -1,13 +1,13 @@
 package test;
 
 import entity.OrderItem;
+import org.junit.jupiter.api.Test;
 import valueobject.BookInfo;
 import valueobject.Price;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.math.BigDecimal;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class OrderItemTest {
 
