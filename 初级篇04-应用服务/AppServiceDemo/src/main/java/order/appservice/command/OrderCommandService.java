@@ -1,8 +1,8 @@
-package appservice.command;
+package order.appservice.command;
 
-import command.CreateOrderCommand;
-import entity.Order;
-import repository.OrderRepository;
+import order.command.CreateOrderCommand;
+import order.entity.Order;
+import order.repository.OrderRepository;
 
 public class OrderCommandService {
     private final OrderRepository orderRepository;

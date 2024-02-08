@@ -1,13 +1,13 @@
 package test;
 
-import command.CreateOrderCommand;
-import entity.Order;
-import entity.OrderItem;
+import order.command.CreateOrderCommand;
+import order.entity.Order;
+import order.entity.OrderItem;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import valueobject.BookInfo;
-import valueobject.Price;
+import order.valueobject.BookInfo;
+import order.valueobject.Price;
 
 import java.math.BigDecimal;
 import java.util.Collections;

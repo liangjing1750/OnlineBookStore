@@ -1,13 +1,13 @@
 package test;
 
-import appservice.command.OrderCommandService;
-import command.CreateOrderCommand;
-import entity.Order;
-import entity.OrderItem;
+import order.appservice.command.OrderCommandService;
+import order.command.CreateOrderCommand;
+import order.entity.Order;
+import order.entity.OrderItem;
 import org.junit.jupiter.api.Test;
-import repository.OrderRepository;
-import valueobject.BookInfo;
-import valueobject.Price;
+import order.repository.OrderRepository;
+import order.valueobject.BookInfo;
+import order.valueobject.Price;
 
 import java.math.BigDecimal;
 import java.util.Collections;

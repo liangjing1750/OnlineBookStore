@@ -1,7 +1,7 @@
-package entity;
+package order.entity;
 
-import valueobject.BookInfo;
-import valueobject.Price;
+import order.valueobject.BookInfo;
+import order.valueobject.Price;
 
 /**
  * 订单项，表示订单中的一种图书及其购买数量和价格。

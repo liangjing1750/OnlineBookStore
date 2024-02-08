@@ -1,7 +1,7 @@
-package appservice.query;
+package order.appservice.query;
 
 
-import appservice.query.dto.OrderDetails;
+import order.appservice.query.dto.OrderDetails;
 
 public class OrderQueryService {
     // 可以使用MyBatis等框架实现查询

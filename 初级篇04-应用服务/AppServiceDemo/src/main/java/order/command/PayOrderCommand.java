@@ -1,12 +1,12 @@
-package command;
+package order.command;
 
 /**
- * 发货订单命令，用于指示对特定订单进行发货操作。
+ * 支付订单命令，用于指示支付特定的订单。
  */
-public class ShipOrderCommand {
+public class PayOrderCommand {
     private String orderId; // 订单ID
 
-    public ShipOrderCommand(String orderId) {
+    public PayOrderCommand(String orderId) {
         this.orderId = orderId;
     }
 

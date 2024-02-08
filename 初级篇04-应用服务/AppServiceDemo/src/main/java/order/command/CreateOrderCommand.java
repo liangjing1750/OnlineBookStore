@@ -1,6 +1,6 @@
-package command;
+package order.command;
 
-import entity.OrderItem;
+import order.entity.OrderItem;
 
 import java.util.List;
 

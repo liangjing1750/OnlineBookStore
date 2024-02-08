@@ -1,4 +1,4 @@
-package command;
+package order.command;
 
 /**
  * 完成订单命令，用于指示将特定订单标记为已完成状态。

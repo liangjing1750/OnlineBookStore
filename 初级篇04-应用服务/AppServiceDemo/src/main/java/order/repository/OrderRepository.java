@@ -1,6 +1,6 @@
-package repository;
+package order.repository;
 
-import entity.Order;
+import order.entity.Order;
 
 public interface OrderRepository {
     void save(Order order); // 保存整个Order聚合

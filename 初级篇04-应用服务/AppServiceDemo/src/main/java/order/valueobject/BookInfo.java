@@ -1,4 +1,4 @@
-package valueobject;
+package order.valueobject;
 
 import java.util.Objects;
 

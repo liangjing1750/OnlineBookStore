@@ -1,9 +1,9 @@
 package test;
 
-import entity.OrderItem;
+import order.entity.OrderItem;
 import org.junit.jupiter.api.Test;
-import valueobject.BookInfo;
-import valueobject.Price;
+import order.valueobject.BookInfo;
+import order.valueobject.Price;
 
 import java.math.BigDecimal;
 

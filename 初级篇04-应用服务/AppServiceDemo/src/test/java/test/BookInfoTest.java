@@ -1,7 +1,7 @@
 package test;
 
 import org.junit.jupiter.api.Test;
-import valueobject.BookInfo;
+import order.valueobject.BookInfo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;

@@ -1,7 +1,7 @@
 package test;
 
 import org.junit.jupiter.api.Test;
-import valueobject.Price;
+import order.valueobject.Price;
 
 import java.math.BigDecimal;
 

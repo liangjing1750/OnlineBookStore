@@ -1,9 +1,9 @@
-package entity;
+package order.entity;
 
-import command.CompleteOrderCommand;
-import command.CreateOrderCommand;
-import command.PayOrderCommand;
-import command.ShipOrderCommand;
+import order.command.CompleteOrderCommand;
+import order.command.CreateOrderCommand;
+import order.command.PayOrderCommand;
+import order.command.ShipOrderCommand;
 
 import java.util.ArrayList;
 import java.util.List;

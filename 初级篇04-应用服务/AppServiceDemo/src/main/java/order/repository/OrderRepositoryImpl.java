@@ -1,6 +1,6 @@
-package repository;
+package order.repository;
 
-import entity.Order;
+import order.entity.Order;
 
 public class OrderRepositoryImpl implements OrderRepository {
     @Override
