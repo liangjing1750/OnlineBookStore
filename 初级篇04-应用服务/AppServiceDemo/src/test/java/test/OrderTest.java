@@ -3,11 +3,11 @@ package test;
 import order.command.CreateOrderCommand;
 import order.entity.Order;
 import order.entity.OrderItem;
+import order.valueobject.BookInfo;
+import order.valueobject.Price;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import order.valueobject.BookInfo;
-import order.valueobject.Price;
 
 import java.math.BigDecimal;
 import java.util.Collections;

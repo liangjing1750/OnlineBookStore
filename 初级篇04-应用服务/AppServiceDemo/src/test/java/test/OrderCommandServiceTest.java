@@ -4,10 +4,10 @@ import order.appservice.command.OrderCommandService;
 import order.command.CreateOrderCommand;
 import order.entity.Order;
 import order.entity.OrderItem;
-import org.junit.jupiter.api.Test;
 import order.repository.OrderRepository;
 import order.valueobject.BookInfo;
 import order.valueobject.Price;
+import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 import java.util.Collections;
