@@ -23,15 +23,15 @@ public class Price implements Serializable {
         this.amount = amount;
     }
 
-    // Getter
-    public BigDecimal getAmount() {
-        return amount;
-    }
-
-    public void setAmount(BigDecimal amount) {
+    public void modify(BigDecimal amount) {
         if (amount.compareTo(this.amount) != 0) {
             throw new UnsupportedOperationException("价格不能修改");
         }
+    }
+
+    // Getter
+    public BigDecimal getAmount() {
+        return amount;
     }
 
     // Price的equals和hashCode方法根据amount来实现，确保值对象的等价性

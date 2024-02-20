@@ -17,7 +17,7 @@ public class PriceTest {
         // 尝试更改Price对象的金额值，预期会抛出异常或无法更改
         assertThrows(UnsupportedOperationException.class, () -> {
             // 假设Price类中有方法可以更改amount的值，这里应该抛出异常
-             initialPrice.setAmount(new BigDecimal("39.99"));
+             initialPrice.modify(new BigDecimal("39.99"));
         });
 
         // 验证金额值未改变
