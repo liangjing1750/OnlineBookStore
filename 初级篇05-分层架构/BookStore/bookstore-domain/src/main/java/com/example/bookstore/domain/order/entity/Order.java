@@ -2,6 +2,7 @@ package com.example.bookstore.domain.order.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -70,6 +71,13 @@ public class Order implements Serializable {
     // 获取订单项
     public List<OrderItem> getItems() {
         return items;
+    }
+
+    /**
+     * @return 订单的总金额
+     */
+    public BigDecimal calculateTotalAmount() {
+        return this.getItems().stream().map(OrderItem::calculateAmount).reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 
     public void setOrderId(String orderId) {

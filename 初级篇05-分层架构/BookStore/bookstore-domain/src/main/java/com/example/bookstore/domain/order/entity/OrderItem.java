@@ -6,6 +6,7 @@ import com.example.bookstore.domain.order.valueobject.Price;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * 订单项，表示订单中的一种图书及其购买数量和价格。
@@ -81,5 +82,9 @@ public class OrderItem implements Serializable {
 
     public void setPrice(Price price) {
         this.price = price;
+    }
+
+    public BigDecimal calculateAmount() {
+        return this.getPrice().getAmount().multiply(BigDecimal.valueOf(this.getQuantity()));
     }
 }
