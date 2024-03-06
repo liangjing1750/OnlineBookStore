@@ -1,5 +1,7 @@
 package com.example.bookstore.domain.order.entity;
 
+import com.example.bookstore.domain.order.event.*;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -19,6 +21,8 @@ public class Order implements Serializable {
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrderItem> items = new ArrayList<>(); // 订单项
 
+    private List<OrderEvent> events = new ArrayList<>(); // 存储生成的事件
+
     public Order() {
         // 初始化时，订单聚合根可能不立即关联任何订单，直到处理创建订单的命令
     }
@@ -29,6 +33,7 @@ public class Order implements Serializable {
         this.items.addAll(orderItems);
         this.items.forEach(s -> s.setOrderId(orderId));
         this.status = "NEW";
+        events.add(new OrderCreatedEvent(this.orderId, this.items));
     }
 
     // 支付订单
@@ -38,6 +43,7 @@ public class Order implements Serializable {
         } else {
             throw new IllegalStateException("只有新建状态的订单才能支付");
         }
+        events.add(new OrderPaidEvent(this.orderId));
     }
 
     // 发货订单
@@ -47,6 +53,7 @@ public class Order implements Serializable {
         } else {
             throw new IllegalStateException("只有已支付状态的订单才能发货");
         }
+        events.add(new OrderShippedEvent(this.orderId));
     }
 
     // 完成订单
@@ -56,6 +63,7 @@ public class Order implements Serializable {
         } else {
             throw new IllegalStateException("只有已发货状态的订单才能标记为已完成");
         }
+        events.add(new OrderCompletedEvent(this.orderId));
     }
 
     // 获取订单ID
