@@ -46,7 +46,7 @@ public class OrderTest {
 
     private Order creatOrder() {
         Order order = new Order();
-        OrderItem item = new OrderItem("orderId123", "ISBN123", new BookInfo("Effective Java", "author"), 1, new Price(BigDecimal.TEN));
+        OrderItem item = new OrderItem("orderId123", 1, new BookInfo("Effective Java", "author", "123"), 1, new Price(BigDecimal.TEN));
         order.createOrder("orderId123", Collections.singletonList(item));
         return order;
     }

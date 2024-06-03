@@ -18,7 +18,7 @@ public class OrderItem implements Serializable {
     @Id
     private String orderId; // 所属订单的ID
     @Id
-    private String isbn; // 图书的ISBN
+    private Integer itemId; // 订单项Id
 
     @Embedded
     private BookInfo bookInfo; // 图书信息值对象
@@ -35,9 +35,9 @@ public class OrderItem implements Serializable {
     public OrderItem() {
     }
 
-    public OrderItem(String orderId, String isbn, BookInfo bookInfo, int quantity, Price price) {
+    public OrderItem(String orderId, Integer itemId, BookInfo bookInfo, int quantity, Price price) {
         this.orderId = orderId;
-        this.isbn = isbn;
+        this.itemId = itemId;
         this.bookInfo = bookInfo;
         this.quantity = quantity;
         this.price = price;
@@ -48,8 +48,8 @@ public class OrderItem implements Serializable {
         return orderId;
     }
 
-    public String getIsbn() {
-        return isbn;
+    public Integer getItemId() {
+        return itemId;
     }
 
     public BookInfo getBookInfo() {
@@ -68,8 +68,8 @@ public class OrderItem implements Serializable {
         this.orderId = orderId;
     }
 
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
+    public void setItemId(Integer itemId) {
+        this.itemId = itemId;
     }
 
     public void setBookInfo(BookInfo bookInfo) {

@@ -20,7 +20,7 @@ public class OrderCommandServiceTest {
 
     @Test
     public void testCreateOrder() {
-        OrderItem sampleOrderItem = new OrderItem("order123", "ISBN123", new BookInfo("Effective Java", "Joshua Bloch"), 1, new Price(BigDecimal.ONE));
+        OrderItem sampleOrderItem = new OrderItem("order123", 1, new BookInfo("Effective Java", "Joshua Bloch", "ISBN123"), 1, new Price(BigDecimal.ONE));
         CreateOrderCommand mockCreateOrderCommand = new CreateOrderCommand(Collections.singletonList(sampleOrderItem));
         // mock资源库
         OrderRepository mockRepository = mock(OrderRepository.class);

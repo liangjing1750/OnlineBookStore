@@ -11,13 +11,15 @@ import java.util.Objects;
 public class BookInfo implements Serializable {
     private String title;
     private String author;
+    private String isbn;
 
     public BookInfo() {
     }
 
-    public BookInfo(String title, String author) {
+    public BookInfo(String title, String author, String isbn) {
         this.title = title;
         this.author = author;
+        this.isbn = isbn;
     }
 
     // Getters
@@ -29,6 +31,14 @@ public class BookInfo implements Serializable {
         return author;
     }
 
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
     public void setTitle(String title) {
         this.title = title;
     }
@@ -38,18 +48,25 @@ public class BookInfo implements Serializable {
     }
 
     // BookInfo的equals和hashCode方法根据isbn, title, author来实现，确保值对象的等价性
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         BookInfo bookInfo = (BookInfo) o;
-        return title.equals(bookInfo.title) &&
-                author.equals(bookInfo.author);
+        return Objects.equals(title, bookInfo.title) && Objects.equals(author, bookInfo.author) && Objects.equals(isbn, bookInfo.isbn);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(title, author);
+        return Objects.hash(title, author, isbn);
+    }
+
+    @Override
+    public String toString() {
+        return "BookInfo{" +
+                "title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", isbn='" + isbn + '\'' +
+                '}';
     }
 }

@@ -4,14 +4,14 @@ import java.io.Serializable;
 
 public class OrderItemId implements Serializable {
     private String orderId;
-    private String isbn;
+    private Integer itemId;
 
     public OrderItemId() {
     }
 
-    public OrderItemId(String orderId, String isbn) {
+    public OrderItemId(String orderId, Integer itemId) {
         this.orderId = orderId;
-        this.isbn = isbn;
+        this.itemId = itemId;
     }
 
     public String getOrderId() {
@@ -22,11 +22,11 @@ public class OrderItemId implements Serializable {
         this.orderId = orderId;
     }
 
-    public String getIsbn() {
-        return isbn;
+    public Integer getItemId() {
+        return itemId;
     }
 
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
+    public void setItemId(Integer itemId) {
+        this.itemId = itemId;
     }
 }
